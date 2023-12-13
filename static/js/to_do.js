@@ -4,10 +4,10 @@ function task_delete(task_id){
         headers: {
             'X-CSRFToken': csrftoken
         },
-        url: `/task/task-delete-edit/`+task_id,
+        url: `/task-delete-edit/`+task_id,
         success: function(response) {
             var data = window.location.origin
-            window.location.href = '/task/task-dashboard';
+            window.location.href = '/task-dashboard';
         },
         error: function(response) {
         }
@@ -34,11 +34,11 @@ function task_edit(task_id){
         },
         enctype: "multipart/form-data",
         data: data,
-        url: `/task/task-delete-edit/`+task_id,
+        url: `/task-delete-edit/`+task_id,
         success: function(response) {
 
             var data = window.location.origin + '/task-details/' + response.slug
-            window.location.href = '/task/task-dashboard';
+            window.location.href = '/task-dashboard';
         },
         error: function(response) {
         }
